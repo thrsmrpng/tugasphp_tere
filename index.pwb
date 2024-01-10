@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my website</title>
+</head>
+<body>
+
+<?php
+
+ if ($_server["REQUEST_METHOOD"] == "POST") {
+    $firstname = $_POST ["firstname"];
+    $lastname = $_POST["lastname"];
+    $gender = isset($_POST["gender"]) ? $_POST["gender"] : "";
+    $nationaly = $_POST["nationality"];
+    $languages = isset($_POST["languages"]) ? $_POST["languages"] : [];
+    $_bio = $_POST["bio"];
+
+    echo "<h1>Selamat datang di website</h1>";
+    echo "<p>$firstname</p>";
+    echo "<p>$lastname</p>";
+    echo "<p>Jenis kelamin: $gender</p>";
+    echo "<p>Kewenegaraan: $nationality</p>";
+    echo "<p>Bahasa yang dikuasai: " . implode(", ", $languages) . "</p>";
+    echo "<p>Bio: $bio</p>";
+
+ }
+ ?>
+    <h1>Selamat Datang</h1>
+    <h2>Terima kasih telah bergabung di Website kami. Media Belajar kita bersama.</h2>
+</body>
+</html>
