@@ -4,34 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir</title>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            margin: 0;
+            }
+
+            .container {
+                text-align: center;
+            }
+        </style>
 </head>
 <body>
-    <form method="post" action="index1.php"></form>
-    <h1>Buat Account Baru</h1>
-    <h2>Sign Up Form</h2>
+    <form method="post" action="index3.php">
+        <h1>Buat Account Baru</h1>
+        <h2>Sign Up Form</h2>
 
-    <label for="firstname">First name : </label><br><br>
-    <input type="text"><br><br>
-    <label for="lastname">Last name : </label><br><br>
-    <input type="text"><br><br>
+        <label for="firstname">First name : </label><br><br>
+        <input type="text" name ="firstname" id="firstname" required><br><br>
+        <label for="lastname">Last name : </label><br><br>
+        <input type="text" name ="lastname" id="lastname" required><br><br>
 
-    <label for="Gender">Gender</label><br><br>
-    <input type="radio">Male <br>
-    <input type="radio">Female <br><br>
+        <label for="Gender">Gender</label><br><br>
+        <input type="radio" name="gender" value="male">Male <br>
+        <input type="radio" name="gender" value="female">Female <br><br>
 
-   <label for="Nationality">Nationality</label><br><br> <select name="" id="">Nationality
-        <option value="Indonesia">Indonesia</option>
-    </select>
-    <br><br>
+        <label for="Nationality">Nationality</label><br><br>
+        <select id="nationality" name="nationality">
+            <option value="Indonesia">Indonesia</option>
+            <option value="English">English</option>
+            <option value="Korean">Korean</option>
+            <option value="Germany">Germany</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
 
-    <label for="Language Spoken">Language Spoken</label><br><br>
-    <input type="checkbox" name="Indo" value="Bahasa Indonesia">Bahasa Indonesia<br>
-    <input type="checkbox" name="English" value="English">English<br>
-    <input type="checkbox" name="Other" value="Other">Other<br>
-    <br>
-    <label for="bio">Bio</label><br>
-    <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
-    <button>Sign Up</button><br><br>
-
+        <label for="Language Spoken">Language Spoken</label><br><br>
+        <input type="checkbox" name="languages[]" value="Bahasa Indonesia">Bahasa Indonesia<br>
+        <input type="checkbox" name="languages[]" value="English">English<br>
+        <input type="checkbox" name="languages[]" value="Korean">Korean<br>
+        <input type="checkbox" name="languages[]" value="Germany">Germany<br>
+        <input type="checkbox" name="languages[]" value="Japanese">Japanese<br>
+        <input type="checkbox" name="languages[]" value="Chinese">Chinese<br>
+        <input type="checkbox" name="languages[]" value="Other">Other<br>
+        <br>
+        <label for="bio">Bio</label><br>
+        <textarea id="bio" name="bio" cols="30" rows="10" required></textarea><br><br>
+        <button type="submit">Sign Up</button><br><br>
+    </form>
 </body>
 </html>
