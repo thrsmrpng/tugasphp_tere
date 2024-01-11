@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my website</title>
+    <title>Media Online</title>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            margin: 0;
+            }
+
+            .container {
+                text-align: center;
+            }
+        </style>
 </head>
 <body>
-
-<?php
-
- if ($_server["REQUEST_METHOOD"] == "POST") {
-    $firstname = $_POST ["firstname"];
-    $lastname = $_POST["lastname"];
-    $gender = isset($_POST["gender"]) ? $_POST["gender"] : "";
-    $nationaly = $_POST["nationality"];
-    $languages = isset($_POST["languages"]) ? $_POST["languages"] : [];
-    $_bio = $_POST["bio"];
-
-    echo "<h1>Selamat datang di website</h1>";
-    echo "<p>$firstname</p>";
-    echo "<p>$lastname</p>";
-    echo "<p>Jenis kelamin: $gender</p>";
-    echo "<p>Kewenegaraan: $nationality</p>";
-    echo "<p>Bahasa yang dikuasai: " . implode(", ", $languages) . "</p>";
-    echo "<p>Bio: $bio</p>";
-
- }
- ?>
-    <h1>Selamat Datang</h1>
-    <h2>Terima kasih telah bergabung di Website kami. Media Belajar kita bersama.</h2>
+    <h1>Media Online</h1>
+    <h2>Sosial Media Developer</h2>
+    <p>Belajar dan berbagi agar hidup menjadi lebih baik</p>
+    
+    <h2>Benefit Join di Media Online</h2>
+    <ul>
+        <li> Mendapatkan motivasi dari sesama para developer</li>
+        <li> Sharing knowledge</li>
+        <li> Dibuat oleh calon web developer terbaik</li>
+    </ul>
+    
+    <h2>Cara Bergabung ke Media Online</h2>
+    <ol>
+        <li> Mengunjungi website ini</li>
+        <li> Mendaftarkan di <a href="index2.php">Form Sign Up</a></li>
+        <li> Selesai</li>
+    </ol>
 </body>
 </html>
